@@ -1,0 +1,719 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat';
+    /* background-color: #022b7d; */
+    background-color: #fff;
+}
+
+/*================= Banner =============== */
+
+header {
+    width: 100%;
+    height: 50px;
+}
+
+.banner {
+    padding: 0 23px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.banner .left {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.banner .left .logo-text {
+    flex: 0 1 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.banner .left img {
+    width: 90px;
+    /* 60px on small devices*/
+    padding-right: 4px;
+}
+
+.banner .left .college-name {
+    font-weight: 600;
+    color: #022b7d;
+}
+
+.banner .right {
+    display: flex;
+    align-items: center;
+}
+
+
+@media only screen and (max-width: 576px) {
+    .banner .left {
+        flex: 0 1 250px;
+    }
+
+    .banner .left img {
+        width: 60px;
+    }
+
+    .banner .left .logo-text .college-name {
+        font-size: 12px;
+        font-weight: 500px;
+    }
+
+    .banner .left .logo-text .tagline {
+        font-size: 10px;
+    }
+
+    .banner .right .icons,
+    .banner .right .icons i {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 577px) {
+    .banner .left {
+        flex: 0 1 320px;
+    }
+
+    .banner .left .logo-text .tagline {
+        font-size: 12px;
+    }
+
+    .banner .left img {
+        width: 70px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .banner {
+        padding: 0 40px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .banner {
+        padding: 0 60px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    header {
+        height: 80px;
+    }
+
+    .banner {
+        padding: 0 20%;
+    }
+
+    .banner .left {
+        flex: 0 1 400px;
+    }
+
+    .banner .left img {
+        width: 90px;
+    }
+
+    .banner .left .logo-text .college-name {
+        font-size: 18px;
+    }
+
+    .banner .left .logo-text .tagline {
+        font-size: 14px;
+    }
+}
+
+/*================= Icons =============== */
+.icons {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.icons a {
+    color: #022b7d;
+    text-decoration: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 0.4s;
+}
+
+.icons a:hover {
+    /* color: white;
+    background-color: #022b7d; */
+    box-shadow: rgba(0, 0, 0, 0.192) 0px 4px 12px;
+}
+
+/*================= Search =============== */
+
+.search-container {
+    width: 36px;
+    height: 36px;
+    border-radius: 50px;
+    /* background-color: #022b7d; */
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    transition-duration: 0.4s;
+    overflow: hidden;
+}
+
+.search-container:hover {
+    box-shadow: rgba(0, 0, 0, 0.192) 0px 4px 12px;
+}
+
+.search-icon {
+    font-size: 18px;
+    font-weight: 200;
+    cursor: pointer;
+    color: #022b7d;
+    position: relative;
+    right: 9px;
+}
+
+.search-container.active {
+    width: 280px;
+    box-shadow: rgba(0, 0, 0, 0.192) 0px 4px 12px;
+}
+
+.search-input {
+    position: relative;
+    width: 200px;
+    height: 36px;
+    right: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.search-input input {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+}
+
+/*================= Search Modal =============== */
+.search-modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0;
+    bottom: 0;
+    padding: 50px 20px;
+    margin: 0 auto;
+    overflow-y: hidden;
+}
+
+.search-modal form {
+    background-color: whitesmoke;
+    width: 100%;
+    padding: 10px;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.search-modal form input {
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background-color: transparent;
+    width: 100%;
+    font-size: 16px;
+    padding: 8px 10px;
+}
+
+.search-modal form i {
+    padding-right: 10px;
+    font-size: 20px;
+}
+
+@media only screen and (min-width: 820px) {
+    .search-modal {
+        display: none;
+    }
+}
+
+/*================================ Navbar Starts (NiladriC) ================================*/
+
+.navbar {
+    overflow: hidden;
+    background-color: #022b7d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    overflow: hidden;
+    margin: 0 30px;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    color: #f9c000;
+    padding: 20px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    cursor: pointer;
+}
+
+.dropbtn:hover {
+    border-bottom: 3px #f9c000;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-bottom: 3px solid #f9c000;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.dropdown-content a {
+    white-space: nowrap;
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown-content.show {
+    display: block;
+    opacity: 1;
+}
+
+.dropdown-sub-content {
+    z-index: 1;
+    display: none;
+    background-color: #ddd;
+}
+
+.dropdown-sub-content.show {
+    display: block;
+}
+
+.navbar .dropbtn {
+    position: relative;
+    text-decoration: none;
+}
+
+.navbar .dropbtn::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 50%;
+    background-color: #f9c000;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.navbar .dropbtn:hover::after,
+.navbar .dropbtn.active::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Burger Menu */
+.burger-menu {
+    display: none;
+    position: relative;
+    padding: 1.5rem 2.5rem;
+    cursor: pointer;
+}
+
+.menu-toggle {
+    position: absolute;
+    right: 1.5rem;
+    top: 49%;
+    transform: translate(0, -50%);
+    height: 26px;
+    width: 29px;
+
+    &,
+    &:hover {
+        color: #f9c000;
+    }
+}
+
+.menu-toggle-bar {
+    display: block;
+    position: absolute;
+    top: 50%;
+    margin-top: -1px;
+    right: 0;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #f9c000;
+    transition: all 0.3s ease;
+
+    &.menu-toggle-bar--top {
+        transform: translate(0, -8px);
+    }
+
+    &.menu-toggle-bar--bottom {
+        transform: translate(0, 8px);
+    }
+
+    .nav-open & {
+        &.menu-toggle-bar--top {
+            transform: translate(0, 0) rotate(45deg);
+        }
+
+        &.menu-toggle-bar--middle {
+            opacity: 0;
+        }
+
+        &.menu-toggle-bar--bottom {
+            transform: translate(0, 0) rotate(-45deg);
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .dropdown {
+        margin: 0 2px;
+    }
+
+    .dropdown .dropbtn {
+        font-size: 14px;
+    }
+
+    .navbar a {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .dropdown {
+        display: none;
+        margin: 0;
+        width: 100%;
+    }
+
+    .dropdown .dropbtn {
+        width: 100%;
+        font-size: 16px;
+        padding: 25px 16px;
+    }
+
+    .navbar .dropbtn::after {
+        display: none;
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar a {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .burger-menu {
+        display: block;
+        margin-left: auto;
+    }
+
+    .dropdown-content {
+        position: relative;
+        border: none;
+    }
+}
+
+/*================================ Navbar Ends (NiladriC) ================================*/
+
+
+/*================================= Search Results Container starts ============================*/
+
+.search-header {
+    padding: 30px 25% 20px 25%;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.search-results-container {
+    margin: 0 25% 5% 25%;
+}
+
+.search-results-container a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.search-results-container .strip {
+    margin: 4px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    gap: 4px;
+    flex-direction: column;
+}
+
+.search-results-container .strip .subtext .date,
+.search-results-container .strip .subtext .type {
+    font-size: 12px;
+    font-weight: 300;
+    color: #888;
+    margin-right: 8px;
+}
+
+.search-results-container .strip .subtext .type {
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-weight: 400;
+    /* background-color: #022b7d2a; */
+    /* color: #222; */
+}
+
+.Notices {
+    background-color: #022b7d2a;
+    color: #222;
+}
+
+.Events {
+    background-color: #7d66022a;
+    color: #222;
+}
+
+.Announcements {
+    background-color: #027d022a;
+    color: #222;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .search-results-container {
+        margin: 0 5%;
+    }
+
+    .search-results-container a {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    .search-results-container {
+        margin: 0 12% 10%;
+    }
+
+    .search-header {
+        padding: 20px 10% 10px 10%;
+    }
+
+    .search-results-container a {
+        font-size: 16px;
+    }
+}
+
+
+/*================================= Search Results Container ends ============================*/
+
+
+/*================================ Footer starts (NiladriC) ======================*/
+
+
+.footer {
+    position: relative;
+    /* bottom: 0; */
+    /* line-height: 0; */
+    width: 100%;
+    background-color: #022b7d;
+    padding: 70px 0 20px 0;
+}
+
+.footer-wrapper {
+    max-width: 1170px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+ul {
+    list-style: none;
+}
+
+.footer-col {
+    width: 25%;
+    padding: 0 2rem;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #f9c000;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 8px;
+}
+
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+    color: #24262b;
+    background-color: #ffffff;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: center;
+    padding: 3rem 2rem 1rem 2rem;
+    color: #bbbbbb;
+    font-size: 16px;
+}
+
+/*responsive*/
+@media(max-width: 767px) {
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 574px) {
+    .footer-col {
+        width: 100%;
+    }
+}
+
+
+/*================================ Footer ends (NiladriC) ======================*/
+
+
+/*================================ Scrool to top starts (NiladriC) ======================*/
+
+.scroll-top .top-btn {
+    display: none;
+    color: #022b7d;
+    position: fixed;
+    bottom: 2%;
+    right: 1.5%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    text-align: center;
+    line-height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+    /* transition: transform 0.1s linear; */
+    transition: opacity 0.4s, visibility 0.4s;
+}
+
+@media only screen and (max-width: 768px) {
+    .scroll-top .top-btn {
+        bottom: 3%;
+        right: 4%;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .scroll-top .top-btn {
+        bottom: 3%;
+        right: 6%;
+        height: 40px;
+        width: 40px;
+        line-height: 40px;
+    }
+}
+
+/*================================= Scrool to top ends (NiladriC) =======================*/

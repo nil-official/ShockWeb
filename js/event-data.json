@@ -1,0 +1,42 @@
+[
+    {
+        "month": "MAY",
+        "day": "10",
+        "title": "Ardour",
+        "time": "11:00 a.m. - 1:00 p.m.",
+        "description": "This community unites students on a common platform to showcase talents in dance, drama, music, songs, and all performing arts.",
+        "image": "../resources/events/arcadia.jpg"
+    },
+    {
+        "month": "MAY",
+        "day": "11",
+        "title": "Agile",
+        "time": "11:00 a.m. - 1:00 p.m.",
+        "description": "The student community for games and sports promotes participation in different competitive events in athletics like basketball, football, etc.",
+        "image": "../resources/events/bsketball.jpg"
+    },
+    {
+        "month": "MAY",
+        "day": "12",
+        "title": "Analects",
+        "time": "11:00 a.m. - 1:00 p.m.",
+        "description": "'Humatronics' and 'Wallzine' by 'Analects' are renowned talent searches and wall magazines, garnering widespread acclaim over the years.",
+        "image": "../resources/events/analects.jpg"
+    },
+    {
+        "month": "MAY",
+        "day": "13",
+        "title": "Acuity",
+        "time": "11:00 a.m. - 1:00 p.m.",
+        "description": "The AOT innovation community offers engineers a platform to showcase software, hardware, and robotics innovations through competitive events and quizzes.",
+        "image": "../resources/events/acuity.jpg"
+    },
+    {
+        "month": "MAY",
+        "day": "14",
+        "title": "Acclivities",
+        "time": "11:00 a.m. - 1:00 p.m.",
+        "description": "Acclivities members organize NSS activities, environmental awareness, and campaigns against alcohol addiction and ragging.",
+        "image": "../resources/events/acclivities.jpg"
+    }
+]

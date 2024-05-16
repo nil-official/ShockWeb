@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academy of Technology : Home</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- <link rel="stylesheet" href="./css/event.css"> -->
+</head>
+
+<body>
+    <!----------------------- Banner (Updated 27-04)------------------------>
+    <header>
+        <div class="banner">
+            <div class="left" id="indexLink">
+                <img src="./resources/images/Logo-small.png" alt="logo">
+                <div class="logo-text">
+                    <div class="college-name">ACADEMY OF TECHNOLOGY</div>
+                    <div class="tagline">Translate your vision into reality</div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="icons">
+                    <a href="https://www.instagram.com/aotconnect/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/channel/UC1lroAhlIz6Reni_I2dpaHA" target="_blank"><i
+                            class="fab fa-youtube"></i></a>
+                    <a href="https://www.linkedin.com/school/academy-of-technology/" target="_blank"><i
+                            class="fab fa-linkedin"></i></a>
+                </div>
+
+                <!-- Search Bar -->
+                <form action="./search-results.html" onsubmit="return validateForm()">
+                    <div class="search-container">
+                        <div class="search-input">
+                            <input type="text" name="search" id="searchInput1" placeholder="Search">
+                        </div>
+                        <div class="search-icon">
+                            <i class="search fa fa-search" id="search-btn"></i>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <!-- Search box Modal for mobile -->
+    <section class="search-modal" id="search-modal">
+        <form action="./search-results.html" onsubmit="return validateForm()">
+            <input type="text" name="search" id="searchInput2" placeholder="Search">
+            <i class="fa-solid fa-xmark" id="search-close-btn"></i>
+        </form>
+    </section>
+
+    <!---------------------- Navbar (NiladriC) Updated 27-04 -------------------------->
+    <!-- This is navbar -->
+    <nav>
+        <div class="navbar">
+
+            <div class="burger-menu" id="burgerMenu">
+                <a id="menu-toggle" class="menu-toggle">
+                    <span class="menu-toggle-bar menu-toggle-bar--top"></span>
+                    <span class="menu-toggle-bar menu-toggle-bar--middle"></span>
+                    <span class="menu-toggle-bar menu-toggle-bar--bottom"></span>
+                </a>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn" onclick="toggleDropdownMenu('dropdown-academics', 'dropicon-academics')">Academics
+                    <i class="fa-solid fa-angle-down" id="dropicon-academics"></i>
+                </button>
+                <div class="dropdown-content" id="dropdown-academics">
+                    <a href="./department.html">Department</a>
+
+                    <a href="#" onclick="toggleSubDropdownMenu(event)" class="sub-menu-link">UG Programs
+                        <i class="fa-solid fas fa-angle-down"></i>
+                    </a>
+                    <div class="dropdown-sub-content" id="ug-program-submenu">
+                        <a href="#">PG Programs</a>
+                        <a href="#">Program Structure</a>
+                        <a href="#">Regulations</a>
+                        <a href="#">Curriculum</a>
+                    </div>
+
+                    <a href="#" onclick="toggleSubDropdownMenu(event)" class="sub-menu-link">Resources
+                        <i class="fa-solid fas fa-angle-down"></i>
+                    </a>
+                    <div class="dropdown-sub-content" id="resources-submenu">
+                        <a href="#">Library</a>
+                        <a href="#">Moodle</a>
+                    </div>
+
+                    <a href="#" onclick="toggleSubDropdownMenu(event)" class="sub-menu-link">Admissions
+                        <i class="fa-solid fas fa-angle-down"></i>
+                    </a>
+                    <div class="dropdown-sub-content" id="admissions-submenu">
+                        <a href="#">UG Admission</a>
+                        <a href="#">PG Admission</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn" onclick="toggleDropdownMenu('dropdown-research', 'dropicon-research')">Research
+                    <i class="fa-solid fa-angle-down" id="dropicon-research"></i>
+                </button>
+                <div class="dropdown-content" id="dropdown-research">
+                    <a href="#">Current Research</a>
+                    <a href="#">Past Research</a>
+                    <a href="#">Research Facilities</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn" onclick="toggleDropdownMenu('dropdown-students', 'dropicon-students')">Students
+                    <i class="fa-solid fa-angle-down" id="dropicon-students"></i>
+                </button>
+                <div class="dropdown-content" id="dropdown-students">
+                    <a href="#">Life@AOT</a>
+                    <a href="#">Campus Facilities</a>
+                    <a href="#">Career Services</a>
+                    <a href="#">Events</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn" onclick="toggleDropdownMenu('dropdown-faculty', 'dropicon-faculty')">Faculty
+                    <i class="fa-solid fa-angle-down" id="dropicon-faculty"></i>
+                </button>
+                <div class="dropdown-content" id="dropdown-faculty">
+                    <a href="#">Faculty List</a>
+                    <a href="#">Faculty Positions</a>
+                    <a href="#">Career Benefits@AOT</a>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+    <!---------------------- Main Body -------------------------->
+    <main>
+
+        <div class="slider-wrapper">
+            <div class="slider" id="slider">
+                <img id="slide-1" src="./resources/aot/1.jpg" alt="img-1" />
+                <img id="slide-2" src="./resources/aot/2.jpg" alt="img-2" />
+                <img id="slide-3" src="./resources/aot/3.jpg" alt="img-3" />
+                <img id="slide-3" src="./resources/aot/4.jpg" alt="img-3" />
+                <img id="slide-3" src="./resources/aot/5.jpg" alt="img-3" />
+            </div>
+            <div class="slide-text">
+                <span class="tagline">LET YOUR <span class="yellow">CREATIVITY</span> FLOW.</span>
+                <span class="quote">“The true sign of intelligence is not knowledge, but imagination.” — Albert
+                    Einstein</span>
+            </div>
+        </div>
+
+        <!---------------------- News scroller (Ananya) (modified)----------------------------->
+        <div class="marquee" id="marquee">
+            <ul id="list">
+                <!-- <li><h4>TECHFIESTA  || </h4></li>
+                <li><h4>GAMES MEET  || </h4></li>
+                <li> <h4>HUMATRONICS-2024  | </h4></li>
+                <li> <h4>4TH INTERNATIONAL CONFERENCE ON COMPUTER, COMMUNICATION, CONTROL AND INFORMATION TECHNOLOGY(C3IT2024)  || </h4></li>
+                <li> <h4>ONLINE FACULTY DEVELOPMENT PROGRAM ON INTERNET OF THINGS (IOT) WITH ARTIFICIAL INTELLIGENCE (AI) AND MACHINE LEARNING (ML)  || </h4></li>
+                <li> <h4>AOT (TEAM: BUZZ 6) BAGGED THE FIRST RANK IN THE AICTE SIH 2023 || </h4></li> -->
+            </ul>
+        </div>
+
+        <!--------------------- Tabs - Announcements and Events (Deep) --------------------->
+        <section>
+            <div class="tab-container">
+                <div class="tab-buttons">
+                    <button class="tab-btn" onclick="changeTab('event')">EVENTS</button>
+                    <button class="tab-btn" onclick="changeTab('announce')">ANNOUNCEMENTS</button>
+                </div>
+            </div>
+
+
+            <!-- Events -->
+            <div class="tab-content event-slider" id="event">
+                <div class="event-wrapper">
+                    <i id="left" class="fa-solid fa-angle-left arrow"></i>
+                    <ul class="carousel">
+
+                        <li class="card">
+                            <div class="img"><img src="./resources/events/arcadia.jpg" alt="img" draggable="false">
+                            </div>
+                            <div class="event-container">
+                                <div class="event-date">
+                                    <span class="event-month">MAY</span>
+                                    <span class="event-day">10</span>
+                                </div>
+                                <div class="event-info">
+                                    <span class="event-title">Ardour</span>
+                                    <span class="event-time">
+                                        <i class="far fa-clock"></i>
+                                        11:00 a.m. - 1:00 p.m.
+                                    </span>
+                                    <p class="event-description">This community unites students on a common
+                                        platform to showcase talents in
+                                        dance, drama, music, songs, and all performing arts.</p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="card">
+                            <div class="img"><img src="./resources/events/bsketball.jpg" alt="img" draggable="false">
+                            </div>
+                            <div class="event-container">
+                                <div class="event-date">
+                                    <span class="event-month">MAY</span>
+                                    <span class="event-day">11</span>
+                                </div>
+                                <div class="event-info">
+                                    <span class="event-title">Agile</span>
+                                    <span class="event-time">
+                                        <i class="far fa-clock"></i>
+                                        11:00 a.m. - 1:00 p.m.</span>
+                                    <p>The student community for games and sports promotes participation in
+                                        different competitive events in athletics like basketball, football,
+                                        etc.</p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="card">
+                            <div class="img"><img src="./resources/events/analects.jpg" alt="img" draggable="false">
+                            </div>
+                            <div class="event-container">
+                                <div class="event-date">
+                                    <span class="event-month">MAY</span>
+                                    <span class="event-day">12</span>
+                                </div>
+                                <div class="event-info">
+                                    <span class="event-title">Analects</span>
+                                    <span class="event-time">
+                                        <i class="far fa-clock"></i>
+                                        11:00 a.m. - 1:00 p.m.</span>
+                                    <p>'Humatronics' and 'Wallzine' by 'Analects' are renowned talent
+                                        searches and wall magazines, garnering widespread acclaim over the
+                                        years.</p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="card">
+                            <div class="img"><img src="./resources/events/acuity.jpg" alt="img" draggable="false"></div>
+                            <div class="event-container">
+                                <div class="event-date">
+                                    <span class="event-month">MAY</span>
+                                    <span class="event-day">13</span>
+                                </div>
+                                <div class="event-info">
+                                    <span class="event-title">Acuity</span>
+                                    <span class="event-time">
+                                        <i class="far fa-clock"></i>
+                                        11:00 a.m. - 1:00 p.m.</span>
+                                    <p>The AOT innovation community offers engineers a platform to showcase
+                                        software, hardware, and robotics innovations through competitive
+                                        events and quizzes.</p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="card">
+                            <div class="img"><img src="./resources/events/acclivities.jpg" alt="img" draggable="false">
+                            </div>
+                            <div class="event-container">
+                                <div class="event-date">
+                                    <span class="event-month">MAY</span>
+                                    <span class="event-day">14</span>
+                                </div>
+                                <div class="event-info">
+                                    <span class="event-title">Acclivities</span>
+                                    <span class="event-time">
+                                        <i class="far fa-clock"></i>
+                                        11:00 a.m. - 1:00 p.m.</span>
+                                    <p>Acclivities members organize NSS activities, environmental awareness
+                                        and campaigns against alcohol addiction and ragging.</p>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                    <i id="right" class="fa-solid fa-angle-right arrow"></i>
+                </div>
+            </div>
+
+
+            <!-- Announcements -->
+            <div class="tab-content scroll-container unfocused" id="announce">
+                <div class="stripe-container">
+
+                    <!-- <div class="stripe">
+                        <div class="left">
+                            <div class="date">
+                                <p>Apr 26, 2024</p>
+                            </div>
+                            <div class="bar">.</div>
+                            <div class="text">
+                                <p>Reminder: Technical report submission deadline approaching. Ensure timely completion.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="download">
+                            <a href="#">Download</a>
+                        </div>
+                    </div> -->
+
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Footer -->
+
+    <footer class="footer">
+        <div class="footer-wrapper">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="#">about us</li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Academic Support</a></li>
+                        <li><a href="#">Health Services</a></li>
+                        <li><a href="#">Student Affairs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/aotconnect/" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/channel/UC1lroAhlIz6Reni_I2dpaHA" target="_blank"><i
+                                class="fab fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com/school/academy-of-technology/" target="_blank"><i
+                                class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                © Academy of Technology 2024 | All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to top button -->
+    <div class="scroll-top">
+        <i class="fa-solid fa-chevron-up top-btn" id="top-btn"></i>
+    </div>
+
+    <!----------------------------- Scripts ------------------------------->
+    <script defer src="./js/redirect.js"></script>
+    <script defer src="./js/nav.js"></script>
+    <script defer src="./js/home.js"></script>
+    <script defer src="./js/slider.js"></script>
+    <script defer src="./js/tab.js"></script>
+    <script defer src="./js/event-slider.js"></script>
+    <script type="module" src="./js/news.js"></script>
+    <script defer src="./js/scroll-to-top.js"></script>
+    <script defer src="./js/search-modal.js"></script>
+    <!-- <script defer src="./js/event.js"></script> -->
+    <script defer src="./js/announce.js"></script>
+    <script defer src="./js/search.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academy of Technology : Department</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/dept.css">
+</head>
+
+<body>
+    <!----------------------- Banner (Updated 27-04)------------------------>
+    <header>
+        <div class="banner">
+            <div class="left" id="indexLink">
+                <img src="./resources/images/Logo-small.png" alt="logo">
+                <div class="logo-text">
+                    <div class="college-name">ACADEMY OF TECHNOLOGY</div>
+                    <div class="tagline">Translate your vision into reality</div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="icons">
+                    <a href="https://www.instagram.com/aotconnect/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/channel/UC1lroAhlIz6Reni_I2dpaHA" target="_blank"><i
+                            class="fab fa-youtube"></i></a>
+                    <a href="https://www.linkedin.com/school/academy-of-technology/" target="_blank"><i
+                            class="fab fa-linkedin"></i></a>
+                </div>
+
+                <!-- Search Bar -->
+                <form action="./search-results.html" onsubmit="return validateForm()">
+                    <div class="search-container">
+                        <div class="search-input">
+                            <input type="text" name="search" id="searchInput1" placeholder="Search">
+                        </div>
+                        <div class="search-icon">
+                            <i class="search fa fa-search" id="search-btn"></i>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <!-- Search box Modal for mobile -->
+    <section class="search-modal" id="search-modal">
+        <form action="./search-results.html" onsubmit="return validateForm()">
+            <input type="text" name="search" id="searchInput2" placeholder="Search">
+            <i class="fa-solid fa-xmark" id="search-close-btn"></i>
+        </form>
+    </section>
+
+    <!---------------------- Navbar (NiladriC) Updated 27-04 -------------------------->
+    <!-- This is navbar -->
+    <nav>
+        <div class="navbar">
+
+            <div class="burger-menu" id="burgerMenu">
+                <a id="menu-toggle" class="menu-toggle">
+                    <span class="menu-toggle-bar menu-toggle-bar--top"></span>
+                    <span class="menu-toggle-bar menu-toggle-bar--middle"></span>
+                    <span class="menu-toggle-bar menu-toggle-bar--bottom"></span>
+                </a>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn"
+                    onclick="toggleDropdownMenu('dropdown-academics', 'dropicon-academics')">Academics
+                    <i class="fa-solid fa-angle-down" id="dropicon-academics"></i>
+                </button>
+                <div class="dropdown-content" id="dropdown-academics">
+                    <a href="#">Department</a>
+
+                    <a href="#" onclick="toggleSubDropdownMenu(event)" class="sub-menu-link">UG Programs
+                        <i class="fa-solid fas fa-angle-down"></i>
+                    </a>
+                    <div class="dropdown-sub-content" id="ug-program-submenu">
+                        <a href="#">PG Programs</a>
+                        <a href="#">Program Structure</a>
+                        <a href="#">Regulations</a>
+                        <a href="#">Curriculum</a>
+                    </div>
+
+                    <a href="#" onclick="toggleSubDropdownMenu(event)" class="sub-menu-link">Resources
+                        <i class="fa-solid fas fa-angle-down"></i>
+                    </a>
+                    <div class="dropdown-sub-content" id="resources-submenu">
+                        <a href="#">Library</a>
+                        <a href="#">Moodle</a>
+                    </div>
+
+                    <a href="#" onclick="toggleSubDropdownMenu(event)" class="sub-menu-link">Admissions
+                        <i class="fa-solid fas fa-angle-down"></i>
+                    </a>
+                    <div class="dropdown-sub-content" id="admissions-submenu">
+                        <a href="#">UG Admission</a>
+                        <a href="#">PG Admission</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn" onclick="toggleDropdownMenu('dropdown-research', 'dropicon-research')">Research
+                    <i class="fa-solid fa-angle-down" id="dropicon-research"></i>
+                </button>
+                <div class="dropdown-content" id="dropdown-research">
+                    <a href="#">Current Research</a>
+                    <a href="#">Past Research</a>
+                    <a href="#">Research Facilities</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn" onclick="toggleDropdownMenu('dropdown-students', 'dropicon-students')">Students
+                    <i class="fa-solid fa-angle-down" id="dropicon-students"></i>
+                </button>
+                <div class="dropdown-content" id="dropdown-students">
+                    <a href="#">Life@AOT</a>
+                    <a href="#">Campus Facilities</a>
+                    <a href="#">Career Services</a>
+                    <a href="#">Events</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn" onclick="toggleDropdownMenu('dropdown-faculty', 'dropicon-faculty')">Faculty
+                    <i class="fa-solid fa-angle-down" id="dropicon-faculty"></i>
+                </button>
+                <div class="dropdown-content" id="dropdown-faculty">
+                    <a href="#">Faculty List</a>
+                    <a href="#">Faculty Positions</a>
+                    <a href="#">Career Benefits@AOT</a>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+    <main>
+        <!-- page heading -->
+        <section>
+            <div class="dept-heading">
+                <span>Department of</span>
+                <p>Master of Computer Applications</p>
+                <div class="subtext">
+                    Empowering the next generation of tech innovators through transformative education and cutting-edge
+                    research. Our department is dedicated to providing a comprehensive and innovative learning
+                    experience, preparing students to succeed in an increasingly complex and interconnected world.
+                </div>
+            </div>
+
+            <!-- news slider -->
+            <div class="news-slider">
+                <div class="slider-wrapper">
+                    <i id="left" class="fa-solid fa-angle-left"></i>
+                    <ul class="carousel">
+
+                        <!-- Card -->
+                        <div class="card" style="background-image: url('resources/images/4.jpg');">
+                            <div class="card-content">
+                                <span>AOT (Team: Buzz 6) bagged the first rank in the AICTE SIH 2023</span>
+                            </div>
+                            <div class="read-more">
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+                        <!-- Card -->
+                        <div class="card" style="background-image: url('resources/images/5.jpg');">
+                            <div class="card-content">
+                                <span>ONLINE FACULTY DEVELOPMENT PROGRAM ON INTERNET OF THINGS (IOT) WITH ARTIFICIAL
+                                    INTELLIGENCE (AI) AND MACHINE LEARNING (ML)</span>
+                            </div>
+                            <div class="read-more">
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+                        <!-- Card -->
+                        <div class="card" style="background-image: url('resources/images/6.jpg');">
+                            <div class="card-content">
+                                <span>4TH INTERNATIONAL CONFERENCE ON COMPUTER, COMMUNICATION, CONTROL AND INFORMATION
+                                    TECHNOLOGY(C3IT2024)</span>
+                            </div>
+                            <div class="read-more">
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+                        <div class="card" style="background-image: url('resources/images/4.jpg');">
+                            <div class="card-content">
+                                <span>AOT (Team: Buzz 6) bagged the first rank in the AICTE SIH 2023</span>
+                            </div>
+                            <div class="read-more">
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+                        <!-- Card -->
+                        <div class="card" style="background-image: url('resources/images/5.jpg');">
+                            <div class="card-content">
+                                <span>ONLINE FACULTY DEVELOPMENT PROGRAM ON INTERNET OF THINGS (IOT) WITH ARTIFICIAL
+                                    INTELLIGENCE (AI) AND MACHINE LEARNING (ML)</span>
+                            </div>
+                            <div class="read-more">
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+                        <!-- Card -->
+                        <div class="card" style="background-image: url('resources/images/6.jpg');">
+                            <div class="card-content">
+                                <span>4TH INTERNATIONAL CONFERENCE ON COMPUTER, COMMUNICATION, CONTROL AND INFORMATION
+                                    TECHNOLOGY(C3IT2024)</span>
+                            </div>
+                            <div class="read-more">
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+
+                    </ul>
+                    <i id="right" class="fa-solid fa-angle-right"></i>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="events-heading">
+                <p>Upcoming Events</p>
+            </div>
+            <div class="events-notice-container">
+                <div class="events-container">
+                    <!-- Event card -->
+                    <div class="event-card">
+                        <div class="event-date">
+                            <span class="month">JUN</span>
+                            <span class="date">02</span>
+                        </div>
+                        <div class="details">
+                            <div class="event-name">Ardour</div>
+                            <div class="event-timing">11:00 a.m. - 1:00 p.m.</div>
+                            <p>The AOT innovation community offers all engineers a platform to showcase software,
+                                hardware, and robotics innovations through competitive events and quizzes.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Event card -->
+                    <div class="event-card">
+                        <div class="event-date">
+                            <span class="month">JUN</span>
+                            <span class="date">03</span>
+                        </div>
+                        <div class="details">
+                            <div class="event-name">Agile</div>
+                            <div class="event-timing">11:00 a.m. - 1:00 p.m.</div>
+                            <p>Humatronics' and 'Wallzine' by 'Analects' are renowned talent searches and wall
+                                magazines, garnering widespread acclaim over the years.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Event card -->
+                    <div class="event-card">
+                        <div class="event-date">
+                            <span class="month">JUN</span>
+                            <span class="date">05</span>
+                        </div>
+                        <div class="details">
+                            <div class="event-name">Analects</div>
+                            <div class="event-timing">11:00 a.m. - 1:00 p.m.</div>
+                            <p>The student community for games and sports promotes participation in different
+                                competitive events in athletics like basketball, football, etc.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Event card -->
+                    <div class="event-card">
+                        <div class="event-date">
+                            <span class="month">JUN</span>
+                            <span class="date">07</span>
+                        </div>
+                        <div class="details">
+                            <div class="event-name">Acuity</div>
+                            <div class="event-timing">11:00 a.m. - 1:00 p.m.</div>
+                            <p>This community unites students on a common platform to showcase talents in dance, drama,
+                                music, songs, and all performing arts.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="notice-container">
+                    <div class="notice-heading">
+                        <p>Notices</p>
+                    </div>
+                    <!-- Scrollable container -->
+                    <div class="scroll-container">
+                        <!-- Contains all the notice stripes -->
+                        <div class="stripe-container">
+
+                            <!-- Stripe 1 -->
+                            <div class="stripe">
+                                <div class="left">
+                                    <div class="date">
+                                        <p>Apr 26, 2024</p>
+                                    </div>
+                                    <div class="bar">.</div>
+                                    <div class="text">
+                                        <p>Submission deadline for technical report</p>
+                                    </div>
+                                </div>
+                                <div class="download">
+                                    <a href="#">Download</a>
+                                </div>
+                            </div>
+
+                            <!-- Stripe 2 -->
+                            <div class="stripe">
+                                <div class="left">
+                                    <div class="date">
+                                        <p>Apr 30, 2024</p>
+                                    </div>
+                                    <div class="bar">.</div>
+                                    <div class="text">
+                                        <p>Online classes according to Academic Routine of Saturday will be
+                                            conducted on Tuesday.</p>
+                                    </div>
+                                </div>
+                                <div class="download">
+                                    <a href="#">Download</a>
+                                </div>
+                            </div>
+
+                            <!-- Stripe 3 -->
+                            <div class="stripe">
+                                <div class="left">
+                                    <div class="date">
+                                        <p>Apr 27, 2024 </p>
+                                    </div>
+                                    <div class="bar">.</div>
+                                    <div class="text">
+                                        <p>All students are hereby notified that due to an essential seminar for
+                                            faculty members, all
+                                            classes will remain suspended from 3 PM today</p>
+                                    </div>
+                                </div>
+                                <div class="download">
+                                    <a href="#">Download</a>
+                                </div>
+                            </div>
+
+                            <!-- Stripe 4 -->
+                            <div class="stripe">
+                                <div class="left">
+                                    <div class="date">
+                                        <p>Apr 27, 2024</p>
+                                    </div>
+                                    <div class="bar">.</div>
+                                    <div class="text">
+                                        <p>Games Meet 2024: No matches till April 27, 2024. We all know that our
+                                            college authority has
+                                            decided to conduct all classes online till April 27, 2024.
+                                            Therefore, no match will be played till April 27, 2024. A revised match
+                                            schedule will be
+                                            published.
+                                            Thank you.</p>
+                                    </div>
+                                </div>
+                                <div class="download">
+                                    <a href="#">Download</a>
+                                </div>
+                            </div>
+
+                            <!-- Stripe 1 -->
+                            <div class="stripe">
+                                <div class="left">
+                                    <div class="date">
+                                        <p>Apr 26, 2024</p>
+                                    </div>
+                                    <div class="bar">.</div>
+                                    <div class="text">
+                                        <p>Submission deadline for technical report</p>
+                                    </div>
+                                </div>
+                                <div class="download">
+                                    <a href="#">Download</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-wrapper">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="#">about us</li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Academic Support</a></li>
+                        <li><a href="#">Health Services</a></li>
+                        <li><a href="#">Student Affairs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/aotconnect/" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/channel/UC1lroAhlIz6Reni_I2dpaHA" target="_blank"><i
+                                class="fab fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com/school/academy-of-technology/" target="_blank"><i
+                                class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                © Academy of Technology 2024 | All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to top button -->
+    <div class="scroll-top">
+        <i class="fa-solid fa-chevron-up top-btn" id="top-btn"></i>
+    </div>
+
+    <!----------------------------- Scripts ------------------------------->
+    <script defer src="./js/redirect.js"></script>
+    <script defer src="js/home.js"></script>
+    <script defer src="js/nav.js"></script>
+    <script defer src="js/news-slider.js"></script>
+    <script defer src="./js/scroll-to-top.js"></script>
+    <script defer src="./js/search-modal.js"></script>
+    <script defer src="./js/search.js"></script>
+
+</body>
+
+</html>

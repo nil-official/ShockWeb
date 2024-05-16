@@ -1,0 +1,1303 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat';
+    /* background-color: #022b7d; */
+    background-color: #fff;
+}
+
+/*================= Banner =============== */
+
+header {
+    width: 100%;
+    height: 50px;
+}
+
+.banner {
+    padding: 0 23px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.banner .left {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.banner .left .logo-text {
+    flex: 0 1 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.banner .left img {
+    width: 90px;
+    /* 60px on small devices*/
+    padding-right: 4px;
+}
+
+.banner .left .college-name {
+    font-weight: 600;
+    color: #022b7d;
+}
+
+.banner .right {
+    display: flex;
+    align-items: center;
+}
+
+
+@media only screen and (max-width: 576px) {
+    .banner .left {
+        flex: 0 1 250px;
+    }
+
+    .banner .left img {
+        width: 60px;
+    }
+
+    .banner .left .logo-text .college-name {
+        font-size: 12px;
+        font-weight: 500px;
+    }
+
+    .banner .left .logo-text .tagline {
+        font-size: 10px;
+    }
+
+    .banner .right .icons,
+    .banner .right .icons i {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 577px) {
+    .banner .left {
+        flex: 0 1 320px;
+    }
+
+    .banner .left .logo-text .tagline {
+        font-size: 12px;
+    }
+
+    .banner .left img {
+        width: 70px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .banner {
+        padding: 0 40px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .banner {
+        padding: 0 60px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    header {
+        height: 80px;
+    }
+
+    .banner {
+        padding: 0 20%;
+    }
+
+    .banner .left {
+        flex: 0 1 400px;
+    }
+
+    .banner .left img {
+        width: 90px;
+    }
+
+    .banner .left .logo-text .college-name {
+        font-size: 18px;
+    }
+
+    .banner .left .logo-text .tagline {
+        font-size: 14px;
+    }
+}
+
+/*================= Icons =============== */
+.icons {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.icons a {
+    color: #022b7d;
+    text-decoration: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 0.4s;
+}
+
+.icons a:hover {
+    /* color: white;
+    background-color: #022b7d; */
+    box-shadow: rgba(0, 0, 0, 0.192) 0px 4px 12px;
+}
+
+/*================= Search =============== */
+
+.search-container {
+    width: 36px;
+    height: 36px;
+    border-radius: 50px;
+    /* background-color: #022b7d; */
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    transition-duration: 0.4s;
+    overflow: hidden;
+}
+
+.search-container:hover {
+    box-shadow: rgba(0, 0, 0, 0.192) 0px 4px 12px;
+}
+
+.search-icon {
+    font-size: 18px;
+    font-weight: 200;
+    cursor: pointer;
+    color: #022b7d;
+    position: relative;
+    right: 9px;
+}
+
+.search-container.active {
+    width: 280px;
+    box-shadow: rgba(0, 0, 0, 0.192) 0px 4px 12px;
+}
+
+.search-input {
+    position: relative;
+    width: 200px;
+    height: 36px;
+    right: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.search-input input {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+}
+
+/*================= Search Modal =============== */
+.search-modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0;
+    bottom: 0;
+    padding: 50px 20px;
+    margin: 0 auto;
+    overflow-y: hidden;
+}
+
+.search-modal form {
+    background-color: whitesmoke;
+    width: 100%;
+    padding: 10px;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.search-modal form input {
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background-color: transparent;
+    width: 100%;
+    font-size: 16px;
+    padding: 8px 10px;
+}
+
+.search-modal form i {
+    padding-right: 10px;
+    font-size: 20px;
+}
+
+@media only screen and (min-width: 820px) {
+    .search-modal {
+        display: none;
+    }
+}
+
+/*================================ Navbar Starts (NiladriC) ================================*/
+
+.navbar {
+    overflow: hidden;
+    background-color: #022b7d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    overflow: hidden;
+    margin: 0 30px;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    color: #f9c000;
+    padding: 20px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    cursor: pointer;
+}
+
+.dropbtn:hover {
+    border-bottom: 3px #f9c000;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-bottom: 3px solid #f9c000;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.dropdown-content a {
+    white-space: nowrap;
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown-content.show {
+    display: block;
+    opacity: 1;
+}
+
+.dropdown-sub-content {
+    z-index: 1;
+    display: none;
+    background-color: #ddd;
+}
+
+.dropdown-sub-content.show {
+    display: block;
+}
+
+.navbar .dropbtn {
+    position: relative;
+    text-decoration: none;
+}
+
+.navbar .dropbtn::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 50%;
+    background-color: #f9c000;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.navbar .dropbtn:hover::after,
+.navbar .dropbtn.active::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Burger Menu */
+.burger-menu {
+    display: none;
+    position: relative;
+    padding: 1.5rem 2.5rem;
+    cursor: pointer;
+}
+
+.menu-toggle {
+    position: absolute;
+    right: 1.5rem;
+    top: 49%;
+    transform: translate(0, -50%);
+    height: 26px;
+    width: 29px;
+
+    &,
+    &:hover {
+        color: #f9c000;
+    }
+}
+
+.menu-toggle-bar {
+    display: block;
+    position: absolute;
+    top: 50%;
+    margin-top: -1px;
+    right: 0;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #f9c000;
+    transition: all 0.3s ease;
+
+    &.menu-toggle-bar--top {
+        transform: translate(0, -8px);
+    }
+
+    &.menu-toggle-bar--bottom {
+        transform: translate(0, 8px);
+    }
+
+    .nav-open & {
+        &.menu-toggle-bar--top {
+            transform: translate(0, 0) rotate(45deg);
+        }
+
+        &.menu-toggle-bar--middle {
+            opacity: 0;
+        }
+
+        &.menu-toggle-bar--bottom {
+            transform: translate(0, 0) rotate(-45deg);
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .dropdown {
+        margin: 0 2px;
+    }
+
+    .dropdown .dropbtn {
+        font-size: 14px;
+    }
+
+    .navbar a {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .dropdown {
+        display: none;
+        margin: 0;
+        width: 100%;
+    }
+
+    .dropdown .dropbtn {
+        width: 100%;
+        font-size: 16px;
+        padding: 25px 16px;
+    }
+
+    .navbar .dropbtn::after {
+        display: none;
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar a {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .burger-menu {
+        display: block;
+        margin-left: auto;
+    }
+
+    .dropdown-content {
+        position: relative;
+        border: none;
+    }
+}
+
+/*================================ Navbar Ends (NiladriC) ================================*/
+
+
+/*================================ Slider starts (NiladriC) (modified)====================*/
+
+.slider-wrapper {
+    position: relative;
+    max-width: 100%;
+    /* overflow-x: hidden; */
+    /* margin: 0 auto; */
+}
+
+.slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 0 10px -0.75rem hsla(0, 0%, 0%, 0.25) inset;
+    /* border-radius: 0.5rem; */
+    -ms-overflow-style: none;
+    /* Hide scrollbar IE and Edge */
+    scrollbar-width: none;
+    /* Hide scrollbar Firefox */
+}
+
+.slider-wrapper .slide-text {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-shadow: 0 0 50px #000000;
+    background-color: #0000004f;
+    /* z-index: 3; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2%;
+}
+
+.slider-wrapper .slide-text span {
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.slider-wrapper .slide-text span .yellow {
+    color: #f9c000;
+}
+
+.slider-wrapper .slide-text .quote {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+.slider img {
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 576px) {
+    .slider {
+        aspect-ratio: 1;
+    }
+
+    .slider-wrapper .slide-text {
+        padding: 0 10px 0 20px;
+    }
+
+    .slider-wrapper .slide-text span {
+        font-size: 38px;
+    }
+
+    .slider-wrapper .slide-text .quote {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    .slider {
+        aspect-ratio: 2;
+    }
+
+    .slider-wrapper .slide-text {
+        padding: 0 10px 0 30px;
+        align-items: flex-start;
+    }
+
+    .slider-wrapper .slide-text span {
+        font-size: 50px;
+    }
+
+    .slider-wrapper .slide-text .quote {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .slider {
+        aspect-ratio: 2.2;
+    }
+
+    .slider-wrapper .slide-text {
+        padding: 0 20px;
+        align-items: center;
+    }
+
+    .slider-wrapper .slide-text span {
+        font-size: 60px;
+    }
+
+    .slider-wrapper .slide-text .quote {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .slider {
+        aspect-ratio: 2.7;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .slider {
+        aspect-ratio: 2.9;
+    }
+}
+
+/*================================ Slider ends (NiladriC) (modified)====================*/
+
+
+/*================= News Bulletin (Ananya) (modified) ====================*/
+.marquee {
+    width: 100%;
+    line-height: 50px;
+    background-color: #252525cb;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    top: -58px;
+    z-index: 4;
+}
+
+.marquee ul {
+    display: flex;
+    list-style: none;
+
+    /* Custom properties */
+    --d: 60s;
+    /* duration */
+    --s: 0.9;
+    /* speed-factor */
+
+    animation: marquee var(--d) linear infinite, marquee calc(var(--d)/var(--s)) linear infinite reverse paused;
+    animation-composition: add;
+    gap: 40px;
+    /* transition: --s 2s ease; */
+}
+
+.marquee ul:hover {
+    animation-play-state: running;
+    /* --s: 1; */
+}
+
+.marquee ul li,
+.list a h4 {
+    white-space: nowrap;
+    padding: 2px 4px;
+    color: white;
+    position: relative;
+    text-decoration: none;
+}
+
+.list a {
+    text-decoration: none;
+}
+
+.list a h4:hover {
+    color: #f9c000;
+}
+
+.marquee ul li ::after {
+    width: 1px;
+    height: 100%;
+    background: #ffffff;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(320%);
+    }
+
+    100% {
+        transform: translateX(-200%);
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .marquee {
+        line-height: 40px;
+        top: -48px;
+    }
+    .marquee ul li h4{
+        font-size: 14px;
+    }
+}
+
+/* =============== Tab system (Deep) (modified)====================== */
+
+.tab-container {
+    width: 100%;
+    height: 60px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tab-container .tab-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.tab-buttons .tab-btn {
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    color: #022b7d;
+    padding: 20px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+}
+
+.tab-buttons .tab-btn::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 50%;
+    background-color: #022b7d;
+    /* Change this color as desired */
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.tab-buttons .tab-btn:hover::after,
+.tab-buttons .tab-btn.active::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Announcements */
+.scroll-container {
+    margin: 35px auto;
+    width: 1100px;
+    height: 480px;
+    overflow-y: scroll;
+    box-shadow: 0px -7px 9px -2px #aaaaaa75 inset;
+}
+
+.scroll-container::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track styles */
+.scroll-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle styles */
+.scroll-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+.scroll-container::-webkit-scrollbar-thumb:hover {
+    background: #022b7d;
+}
+
+.stripe-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+    /* Change this for container width */
+}
+
+.stripe {
+    border-bottom: 1px solid #ddd;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.stripe .left {
+    display: flex;
+    gap: 10px;
+    align-items: stretch;
+}
+
+.stripe .left .date {
+    flex: 1 0 110px;
+    display: flex;
+    align-items: center;
+}
+
+.stripe .left .text {
+    padding: 0 20px 0 10px;
+}
+
+.stripe .left .bar {
+    width: 2px;
+    background-color: #222;
+    height: auto;
+}
+
+.stripe .download a {
+    color: #022b7d;
+    text-decoration: none;
+}
+
+.stripe .download a:hover {
+    text-decoration: underline;
+}
+
+.scroll-container .stripe-container .stripe,
+.scroll-container .stripe-container .stripe .left,
+.scroll-container .stripe-container .stripe .download {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideIn ease-out 1s forwards;
+}
+
+@media only screen and (max-width: 600px) {
+    .tab-container .tab-buttons {
+        border-bottom: 1px solid #ddd;
+    }
+
+    .tab-buttons .tab-btn {
+        font-size: 14px;
+    }
+
+    .scroll-container,
+    .stripe-container {
+        width: 100%;
+        /* Change this for container width */
+    }
+
+    .scroll-container {
+        height: 300px;
+    }
+
+    .stripe {
+        border-bottom: 1px solid #ddd;
+        padding: 15px;
+        display: block;
+    }
+
+    .stripe .left {
+        display: block;
+    }
+
+    .stripe .left .date {
+        font-size: 14px;
+        color: #444;
+        margin-bottom: 3px;
+        font-weight: 600;
+    }
+
+    .stripe .left .bar {
+        display: none;
+    }
+
+    .stripe .left .text {
+        padding-right: 0;
+        margin-bottom: 8px;
+        font-size: 14px;
+    }
+
+    .stripe .download {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 4px;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .scroll-container {
+        height: 400px;
+        width: 85%;
+    }
+}
+
+
+/*================================ Events starts (NiladriC) ====================*/
+
+
+
+
+.event-slider {
+    display: flex;
+    padding: 25px 35px;
+    align-items: center;
+    justify-content: center;
+}
+
+.event-wrapper {
+    max-width: 1100px;
+    width: 100%;
+    position: relative;
+}
+
+.event-wrapper .arrow {
+    z-index: 1;
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    position: absolute;
+    text-align: center;
+    line-height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+}
+
+.event-wrapper .arrow:active {
+    transform: translateY(-50%) scale(0.85);
+}
+
+.event-wrapper .arrow:first-child {
+    left: -22px;
+}
+
+.event-wrapper .arrow:last-child {
+    right: -22px;
+}
+
+.event-wrapper .carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    border-radius: 8px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    padding: 15px 0;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel.no-transition {
+    scroll-behavior: auto;
+}
+
+.carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+
+.carousel.dragging .card {
+    cursor: grab;
+    user-select: none;
+}
+
+.carousel :where(.card, .img) {
+    display: flex;
+    align-items: center;
+}
+
+.carousel .card {
+    scroll-snap-align: start;
+    list-style: none;
+    cursor: pointer;
+    padding-bottom: 15px;
+    flex-direction: column;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+    transition-duration: 0.6s;
+}
+
+.carousel .card:hover {
+    box-shadow: 0px 2px 10px rgba(17, 17, 17, 0.2);
+    /* box-shadow: 0 2px 3px 0 rgba(60, 64, 67, .15), 0 6px 10px 4px rgba(60, 64, 67, .15); */
+}
+
+.card span {
+    color: #6A6D78;
+    font-size: 1.31rem;
+}
+
+.card,
+.img,
+.event-container {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideIn ease-out 1s forwards;
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Card image section */
+.carousel .card .img {
+    padding: 4%;
+}
+
+.card .img img {
+    width: 100%;
+    border-radius: 3%;
+}
+
+
+/* Card content section */
+.card .event-container {
+    display: flex;
+}
+
+.card .event-container .event-date {
+    width: fit-content;
+    padding: 6px 20px;
+    border-right: 1px solid #999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card .event-container .event-date .event-month {
+    font-size: 1.2em;
+    margin: 0 auto;
+}
+
+.card .event-container .event-date .event-day {
+    font-size: 3.5em;
+    font-weight: 600;
+    color: #022b7d;
+}
+
+.card .event-info {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em 1em 0.5em 1em;
+}
+
+.card .event-info .heading {
+    color: #022b7d;
+    font-weight: 700;
+    font-size: 24px;
+    display: block;
+}
+
+.card .event-info .event-time {
+    font-size: 12px;
+    padding: 5px 0 5px 0;
+}
+
+.card .event-info p {
+    margin-top: 10px;
+}
+
+
+/* Responsiveness */
+
+@media screen and (max-width: 1024px) {
+    .event-wrapper .carousel {
+        grid-auto-columns: calc((100% / 2) - 9px);
+    }
+
+    .card .event-container .event-date .event-month {
+        font-size: 16px;
+    }
+
+    .card .event-container .event-date .event-day {
+        font-size: 48px;
+    }
+
+    .card .event-info .event-title {
+        font-size: 20px;
+    }
+
+    .card .event-info .event-time {
+        font-size: 9px;
+    }
+
+    .card .event-info p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .event-wrapper .carousel {
+        grid-auto-columns: 100%;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .card .event-container .event-date .event-month {
+        font-size: 14px;
+    }
+
+    .card .event-container .event-date .event-day {
+        font-size: 40px;
+    }
+
+    .card .event-info .event-title {
+        font-size: 18px;
+    }
+
+    .card .event-info .event-time {
+        font-size: 9px;
+    }
+
+    .card .event-info p {
+        font-size: 12px;
+    }
+
+    .event-wrapper .arrow {
+        height: 40px;
+        width: 40px;
+        line-height: 40px;
+    }
+}
+
+
+/*================================ Events ends (NiladriC) ======================*/
+
+
+
+/*================================ Tab change starts (NiladriC) ======================*/
+
+.unfocused {
+    display: none;
+}
+
+/*================================ Tab change ends (NiladriC) ======================*/
+
+
+
+/*================================ Footer starts (NiladriC) ======================*/
+
+
+.footer {
+    width: 100%;
+    background-color: #022b7d;
+    padding: 70px 0 20px 0;
+    margin-top: 50px;
+}
+
+.footer-wrapper {
+    max-width: 1170px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+ul {
+    list-style: none;
+}
+
+.footer-col {
+    width: 25%;
+    padding: 0 2rem;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #f9c000;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 8px;
+}
+
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+    color: #24262b;
+    background-color: #ffffff;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: center;
+    padding: 3rem 2rem 1rem 2rem;
+    color: #bbbbbb;
+    font-size: 16px;
+}
+
+/*responsive*/
+@media(max-width: 767px) {
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 574px) {
+    .footer-col {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .footer {
+        top: 1150px;
+    }
+}
+
+
+/*================================ Footer ends (NiladriC) ======================*/
+
+
+/*================================ Scrool to top starts (NiladriC) ======================*/
+
+.scroll-top .top-btn {
+    display: none;
+    color: #022b7d;
+    position: fixed;
+    bottom: 2%;
+    right: 1.5%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    text-align: center;
+    line-height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+    /* transition: transform 0.1s linear; */
+    transition: opacity 0.4s, visibility 0.4s;
+}
+
+@media only screen and (max-width: 768px) {
+    .scroll-top .top-btn {
+        bottom: 3%;
+        right: 4%;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .scroll-top .top-btn {
+        bottom: 3%;
+        right: 6%;
+        height: 40px;
+        width: 40px;
+        line-height: 40px;
+    }
+}
+
+/*================================= Scrool to top ends (NiladriC) =======================*/

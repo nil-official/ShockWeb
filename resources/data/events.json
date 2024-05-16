@@ -1,0 +1,37 @@
+[
+    {
+        "name": "Ardour",
+        "time": "11:00 a.m. - 1:00 p.m.",
+        "desc": "This community unites students on a common platform to showcase talents in dance, drama, music, songs, and all performing arts.",
+        "date": "10052024",
+        "link": "#"
+    },
+    {
+        "name": "Agile",
+        "time": "11:00 a.m. - 1:00 p.m.",
+        "desc": "The student community for games and sports promotes participation in different competitive events in athletics like basketball, football, etc.",
+        "date": "12052024",
+        "link": "#"
+    },
+    {
+        "name": "Analects",
+        "time":"11:00 a.m. - 1:00 p.m.",
+        "desc": "'Humatronics' and 'Wallzine' by 'Analects' are renowned talent searches and wall magazines, garnering widespread acclaim over the years.",
+        "date": "10052024",
+        "link": "#"
+    },
+    {
+        "name": "Acuity",
+        "time":"11:00 a.m. - 1:00 p.m.",
+        "desc": "The AOT innovation community offers all engineers a platform to showcase software, hardware, and robotics innovations through competitive events and quizzes.",
+        "date": "13052024",
+        "link": "#"
+    }, 
+    {
+        "name": "Acclivities",
+        "time":"11:00 a.m. - 1:00 p.m.",
+        "desc": "Acclivities members organize NSS activities, environmental awareness and campaigns against alcohol addiction and ragging.",
+        "date": "14052024",
+        "link": "#"
+    }
+]

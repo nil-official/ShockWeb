@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academy of Technology : Search Results</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="./css/search.css">
+</head>
+
+<body>
+    <!----------------------- Banner (Updated 27-04)------------------------>
+    <header>
+        <div class="banner">
+            <div class="left" id="indexLink">
+                <img src="./resources/images/Logo-small.png" alt="logo">
+                <div class="logo-text">
+                    <div class="college-name">ACADEMY OF TECHNOLOGY</div>
+                    <div class="tagline">Translate your vision into reality</div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="icons">
+                    <a href="https://www.instagram.com/aotconnect/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/channel/UC1lroAhlIz6Reni_I2dpaHA" target="_blank"><i
+                            class="fab fa-youtube"></i></a>
+                    <a href="https://www.linkedin.com/school/academy-of-technology/" target="_blank"><i
+                            class="fab fa-linkedin"></i></a>
+                </div>
+
+                <!-- Search Bar -->
+                <form action="./search-results.html" onsubmit="return validateForm()">
+                    <div class="search-container">
+                        <div class="search-input">
+                            <input type="text" name="search" id="searchInput1" placeholder="Search">
+                        </div>
+                        <div class="search-icon">
+                            <i class="search fa fa-search" id="search-btn"></i>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <!-- Search box Modal for mobile -->
+    <section class="search-modal" id="search-modal">
+        <form action="./search-results.html" onsubmit="return validateForm()">
+            <input type="text" name="search" id="searchInput2" placeholder="Search">
+            <i class="fa-solid fa-xmark" id="search-close-btn"></i>
+        </form>
+    </section>
+
+    <!---------------------- Navbar (NiladriC) Updated 27-04 -------------------------->
+    <!-- This is navbar -->
+    <nav>
+        <div class="navbar">
+
+            <div class="burger-menu" id="burgerMenu">
+                <a id="menu-toggle" class="menu-toggle">
+                    <span class="menu-toggle-bar menu-toggle-bar--top"></span>
+                    <span class="menu-toggle-bar menu-toggle-bar--middle"></span>
+                    <span class="menu-toggle-bar menu-toggle-bar--bottom"></span>
+                </a>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn" onclick="toggleDropdownMenu('dropdown-academics', 'dropicon-academics')">Academics
+                    <i class="fa-solid fa-angle-down" id="dropicon-academics"></i>
+                </button>
+                <div class="dropdown-content" id="dropdown-academics">
+                    <a href="./department.html">Department</a>
+
+                    <a href="#" onclick="toggleSubDropdownMenu(event)" class="sub-menu-link">UG Programs
+                        <i class="fa-solid fas fa-angle-down"></i>
+                    </a>
+                    <div class="dropdown-sub-content" id="ug-program-submenu">
+                        <a href="#">PG Programs</a>
+                        <a href="#">Program Structure</a>
+                        <a href="#">Regulations</a>
+                        <a href="#">Curriculum</a>
+                    </div>
+
+                    <a href="#" onclick="toggleSubDropdownMenu(event)" class="sub-menu-link">Resources
+                        <i class="fa-solid fas fa-angle-down"></i>
+                    </a>
+                    <div class="dropdown-sub-content" id="resources-submenu">
+                        <a href="#">Library</a>
+                        <a href="#">Moodle</a>
+                    </div>
+
+                    <a href="#" onclick="toggleSubDropdownMenu(event)" class="sub-menu-link">Admissions
+                        <i class="fa-solid fas fa-angle-down"></i>
+                    </a>
+                    <div class="dropdown-sub-content" id="admissions-submenu">
+                        <a href="#">UG Admission</a>
+                        <a href="#">PG Admission</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn" onclick="toggleDropdownMenu('dropdown-research', 'dropicon-research')">Research
+                    <i class="fa-solid fa-angle-down" id="dropicon-research"></i>
+                </button>
+                <div class="dropdown-content" id="dropdown-research">
+                    <a href="#">Current Research</a>
+                    <a href="#">Past Research</a>
+                    <a href="#">Research Facilities</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn" onclick="toggleDropdownMenu('dropdown-students', 'dropicon-students')">Students
+                    <i class="fa-solid fa-angle-down" id="dropicon-students"></i>
+                </button>
+                <div class="dropdown-content" id="dropdown-students">
+                    <a href="#">Life@AOT</a>
+                    <a href="#">Campus Facilities</a>
+                    <a href="#">Career Services</a>
+                    <a href="#">Events</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn" onclick="toggleDropdownMenu('dropdown-faculty', 'dropicon-faculty')">Faculty
+                    <i class="fa-solid fa-angle-down" id="dropicon-faculty"></i>
+                </button>
+                <div class="dropdown-content" id="dropdown-faculty">
+                    <a href="#">Faculty List</a>
+                    <a href="#">Faculty Positions</a>
+                    <a href="#">Career Benefits@AOT</a>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- Search Results container -->
+    <div class="search-header">
+        Search results
+    </div>
+    <div class="search-results-container" id="search-results">
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-wrapper">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="#">about us</li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Academic Support</a></li>
+                        <li><a href="#">Health Services</a></li>
+                        <li><a href="#">Student Affairs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/aotconnect/" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/channel/UC1lroAhlIz6Reni_I2dpaHA" target="_blank"><i
+                                class="fab fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com/school/academy-of-technology/" target="_blank"><i
+                                class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                © Academy of Technology 2024 | All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to top button -->
+    <div class="scroll-top">
+        <i class="fa-solid fa-chevron-up top-btn" id="top-btn"></i>
+    </div>
+
+    <!----------------------------- Scripts ------------------------------->
+    <script defer src="./js/redirect.js"></script>
+    <script defer src="./js/nav.js"></script>
+    <script defer src="./js/home.js"></script>
+    <script defer src="./js/scroll-to-top.js"></script>
+    <script defer src="./js/search-modal.js"></script>
+    <script defer src="./js/search.js"></script>
+</body>
+
+</html>
